@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: Default
+pool: NewPool152
 #  vmImage: 'ubuntu-latest'
 
 #pool:
@@ -30,39 +30,8 @@ steps:
     fortifyBuildId: '8ball'
     fortifyScanType: 'LocalScan'
     runFortifyUpload: true
-    fortifyServerName: 'SSC'
-    fortifyApplicationName: 'EightBall'
-    fortifyApplicationVersion: '1'
+    fortifyServerName: 'fortifySSC_test'
+    fortifyApplicationName: 'yeni152'
+    fortifyApplicationVersion: '1.0'
 
-#- task: FortifyOnDemandStatic@8
-#  inputs:
-#    FortifyProjects: '.'
-#    FodConnection: 'FoD'
-#    ReleaseOptions: '0'
-#    ReleaseId: 756362
-#    EntitlementSelection: '1'
-#    EntitlementPreference: '3'
-#    OverrideScanSettings: '2'
-#    ScanCentralLocation: 'C:\client\SCClient2220'
-#    InProgressScanActionType: '2'
-#    RemediationScanPreference: '2'
-#    BuildType: 'mvn'
-#    IncludeTests: true
-#    PolicyFailAction: '0'
-
-
-#- task: FortifyScanCentralSAST@7
-#  inputs:
-#    scanCentralCtrlUrl: 'http://10.229.222.183:8999/scancentral-ctrl/'
-#    scanCentralClientToken: '$(ScanCentral.ClientToken)'
-#    sscUrl: 'http://10.229.222.183:8180/ssc/'
-#    sscCiToken: '$(ScanCentral.SscCiToken)'
-#    uploadToSSC: true
-#    applicationName: 'EightBall'
-#    applicationVersion: '1'
-#    buildTool: 'mvn'
-#    skipBuild: true
-#    includeTest: false
-#    block: true
-#    outputFile: 'results.fpr'
 
