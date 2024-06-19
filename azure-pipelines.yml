@@ -6,10 +6,8 @@
 trigger:
 - master
 
-pool: Default
-#  vmImage: 'ubuntu-latest'
+pool: NewPool152
 
-#pool:
 #  vmImage: 'windows-latest'
 
 steps:
